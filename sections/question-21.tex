@@ -1,0 +1,38 @@
+\section{Слабая сходимость в нормированных пространствах и её свойства}
+\label{sec:q-21}
+Пусть $X$ --- нормированное пространство и дана последовательность $\{x_n\} \subset X$. Последовательность $\{x_n\}$ называется \textit{слабо сходящейся к элементу} $x \in X$, если
+$$\langle x_n, f \rangle \rightarrow \langle x, f \rangle\;\text{для любого}\;f \in X^*\text{ \cite[с.~176]{trenogin}}.$$
+
+Запись $\langle x,f \rangle$ означает значение функционала $f$ в точке $x$.
+
+Если $x_n \rightarrow x$ слабо, то $x$ называется \textit{слабым пределом} $\{x_n\}$.\\
+
+\textit{Сильной сходимостью} последовательности $\{x_n\}$ в банаховом пространстве $B$ к некоторому элементу $x \in B$ называется сходимость по норме  числовой последовательности 
+$$\Vert x_n - x \Vert \rightarrow 0\;\text{при}\;n \rightarrow + \infty\;\text{для некоторого}\;x \in B.$$
+При этом норма линейного функционала $f$ на сопряженном пространстве $B^*$ определяется как $\displaystyle \Vert f \Vert_* = \sup_{\Vert x \Vert = 1} |\langle f, x \rangle|$.\\
+
+Пусть $B$ --- банахово пространство. последовательность элементов $\{f_n\} \in B^*$ *--слабо, если для любого $x \in B$ выполняется
+$$|\langle f_n, x\rangle - \langle f, x \rangle| \rightarrow 0\;\text{при}\;n \rightarrow +\infty.$$
+
+Множество $M \subset X$ называется \textit{слабо ограниченным}, если для каждого $f \in X^*$ числовое множество $\{\langle x, f\rangle,\: x \in M\}$ ограничено.
+\subsubsection*{Теорема}
+Если последовательность $x_n \rightarrow x,\;n\rightarrow \infty$, сильно, то $x_n \rightarrow x,\;n\rightarrow \infty$, слабо \cite[с.~176]{trenogin}.
+
+\subsubsection*{Теорема}
+Если $\{x_n\}$ слабо сходится, то она ограничена \cite[с.~177]{trenogin}.
+
+\subsubsection*{Теорема}
+В конечномерном пространстве понятия сильной и слабой сходимости совпадают\cite[с.~177]{trenogin}.
+
+\subsubsection*{Теорема}
+Пусть дан оператор $A \in L(X, Y)$. Если $x_n \rightarrow x_0, \; n\rightarrow \infty$, слабо, то $Ax_n \rightarrow Ax_0,\;n\rightarrow\infty$, слабо\cite[с.~177]{trenogin}.
+
+\subsubsection*{Теорема}
+Для того чтобы последовательность $\{x_n\}$ сходилась слабо к $x_0$, необходимо и достаточно, чтобы:
+\begin{enumerate}
+	\itemsep0pt
+	\item $\{\Vert x_n \Vert\}$ последовательность была ограничена;
+	\item $\langle x_n, f\rangle \rightarrow \langle x_0, f\rangle,\;n\rightarrow \infty$ для любого $f$ из плотного в $X^*$ множества.
+\end{enumerate}
+
+% todo: теоремы 7-8 из учебника треногина, страница 178

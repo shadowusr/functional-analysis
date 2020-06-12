@@ -1,0 +1,52 @@
+\section{Нормированные пространства. Примеры}
+\label{sec:q-5}
+\textit{Поле}~--- это множество с введенными на нём операциями сложения $+$ и умножения $*$, причем операции должны удовлетворять аксиомам:
+\begin{enumerate}
+	\itemsep0em
+	\item Коммутативность сложения: $\forall a,b\in F\quad a+b=b+a$;
+	\item Ассоциативность сложения: $\forall a,b,c\in F\quad (a+b)+c=a+(b+c)$;
+	\item Существование нулевого элемента: $\exists {\boldsymbol {0}}\in F\colon \forall a\in F\quad a+{\boldsymbol {0}}=a$;
+	\item Существование противоположного элемента: $\forall a\in F\;\exists (-a)\in F\colon a+(-a)={\boldsymbol {0}}$;
+	\item Коммутативность умножения: $\forall a,b\in F\quad a*b=b*a$;
+	\item Ассоциативность умножения: $\forall a,b,c\in F\quad (a*b)*c=a*(b*c)$;
+	\item Существование единичного элемента: ${\displaystyle \exists e\in F\setminus \{{\boldsymbol {0}}\}\colon \forall a\in F\quad a*e=a}$;
+	\item Существование обратного элемента для ненулевых элементов: $(\forall a\in F\colon a\neq {\boldsymbol {0}})\;\exists a^{-1}\in F\colon a*a^{-1}=e$;
+	\item Дистрибутивность умножения относительно сложения: ${\displaystyle \forall a,b,c\in F\quad (a+b)*c=(a*c)+(b*c)}$.
+\end{enumerate}
+
+\textit{Линейное (векторное) пространство} $V(F)$ над полем $F$~--- это упорядоченная четверка $(V,F,+,\cdot)$, где:
+\begin{itemize}
+	\itemsep0em
+	\item $V$ --- непустое множество элементов произвольной природы, которые называются \textit{векторами};
+	\item $F$ --- поле, элементы которого называются \textit{скалярами};
+	\item Определена операция \textit{сложения} векторов $V\times V\to V$, сопоставляющая каждой паре элементов $\mathbf {x} ,\mathbf {y} $ множества $V$ единственный элемент множества $V$, называемый их \textit{суммой} и обозначаемый $\mathbf {x} +\mathbf {y}$;
+	\item Определена операция \textit{умножения векторов на скаляры} $F\times V\to V$, сопоставляющая каждому элементу $\lambda$ поля $F$ и каждому элементу $\mathbf {x}$ множества $V$ единственный элемент множества $V$, обозначаемый $\lambda \cdot \mathbf {x}$ или $\lambda \mathbf {x}$;
+\end{itemize}
+При этом данные операции должны удовлетворять следующим аксиомам линейного пространства:
+\begin{enumerate}
+	\itemsep0em
+	\item $\mathbf {x} +\mathbf {y} =\mathbf {y} +\mathbf {x}$, для любых $\mathbf {x} ,\mathbf {y} \in V$ (коммутативность сложения);
+	\item $\mathbf {x} +(\mathbf {y} +\mathbf {z} )=(\mathbf {x} +\mathbf {y} )+\mathbf {z}$, для любых $\mathbf {x} ,\mathbf {y} ,\mathbf {z} \in V$ (ассоциативность сложения);
+	\item существует такой элемент $\mathbf {0} \in V$, что ${\displaystyle \mathbf {x} +\mathbf {0} =\mathbf {0} +\mathbf {x} =\mathbf {x} }$ для любого $\mathbf {x} \in V$ (существование нейтрального элемента относительно сложения), называемый \textit{нулевым вектором} или просто \textit{нулём} пространства $V$;
+	\item для любого $\mathbf {x} \in V$ существует такой элемент $-\mathbf {x} \in V$, что $\mathbf {x} +(-\mathbf {x} )=\mathbf {0}$, называемый вектором, \textit{противоположным} вектору $\mathbf {x}$;
+	\item $\alpha (\beta \mathbf {x} )=(\alpha \beta )\mathbf {x}$ (ассоциативность умножения на скаляр);
+	\item $1\cdot \mathbf {x} =\mathbf {x}$ (унитарность: умножение на нейтральный (по умножению) элемент поля F сохраняет вектор);
+	\item $(\alpha +\beta )\mathbf {x} =\alpha \mathbf {x} +\beta \mathbf {x}$ (дистрибутивность умножения вектора на скаляр относительно сложения скаляров);
+	\item $\alpha (\mathbf {x} +\mathbf {y} )=\alpha \mathbf {x} +\alpha \mathbf {y}$ (дистрибутивность умножения вектора на скаляр относительно сложения векторов).
+\end{enumerate}
+
+\textit{Нормированное векторное пространство}~--- это линейное пространство с заданной на нём нормой. Формально, для данного векторного пространства $X$ должно быть задано отображение из $X$ в $\mathbb{R}$, для которого выполняются следующие свойства:
+\begin{enumerate}
+	\itemsep0em
+	\item $\|x\|\geqslant 0,\;\|x\|=0\Rightarrow x=0$ (норма только нулевого вектора равна нулю).
+	\item $\|\lambda x\|=|\lambda |\cdot \|x\|$ (норма произведения вектора на скаляр равна произведению модуля скаляра и нормы вектора).
+	\item $\|x+y\|\leqslant \|x\|+\|y\|$ (неравенство треугольника).
+\end{enumerate}
+
+\subsubsection*{Примеры нормированных пространств}
+\begin{itemize}
+	\itemsep0em
+	\item $X = \mathbb{R}^{n}; \Vert x \Vert = \sqrt{\sum_{(i)}(x_{i})^{2}}$;
+	\item $\displaystyle X = \mathbb{C}^n; \Vert x \Vert = \left(\sum_{k=1}^{n}\Vert x_k \Vert^p\right)^{\frac{1}{p}},\:p > 1$;
+	\item Дополнительные примеры есть в учебнике \cite[с.~22]{trenogin}.
+\end{itemize}
